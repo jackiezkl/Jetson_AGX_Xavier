@@ -101,6 +101,7 @@ make -j7
 one finished, it should show something like this:
 
 ![image](https://user-images.githubusercontent.com/16247078/111257387-0bfdf900-85e9-11eb-8fb9-e042da8991ce.png)
+
 Notice the opencv_python3 is generated. Then run the following command to make install:
 ```
 sudo make install
