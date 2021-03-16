@@ -119,7 +119,7 @@ sudo rm -rf ~/opencv_contrib
 #Check Jetson status
 Install the jtop by using the following commands:
 ```
-sudo -H pip install -U jetson-stats
+sudo -H pip3 install -U jetson-stats
 sudo reboot
 # start the app with the simple command
 jtop
