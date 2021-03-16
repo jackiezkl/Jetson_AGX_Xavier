@@ -99,6 +99,7 @@ Run the following command on AGX Xavier
 make -j7
 ```
 one finished, it should show something like this:
+
 ![image](https://user-images.githubusercontent.com/16247078/111257387-0bfdf900-85e9-11eb-8fb9-e042da8991ce.png)
 Notice the opencv_python3 is generated. Then run the following command to make install:
 ```
@@ -123,6 +124,7 @@ sudo reboot
 jtop
 ```
 If everything went well, you should see this on the info page:
+
 ![image](https://user-images.githubusercontent.com/16247078/111257593-672feb80-85e9-11eb-832a-e7a24538af0e.png)
 
 # Install TenserFlow from nVidia
