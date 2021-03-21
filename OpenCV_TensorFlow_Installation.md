@@ -54,7 +54,7 @@ then run cmake with the following:
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
         -D CMAKE_INSTALL_PREFIX=/usr/local \
-        -D OPENCV_EXTRA_MODULES_PATH=/media/xavier/sd64/opencv_contrib/modules \
+        -D OPENCV_EXTRA_MODULES_PATH=~/Downloads/opencv_contrib/modules \
         -D EIGEN_INCLUDE_PATH=/usr/include/eigen3 \
         -D WITH_CUDA=ON \
         -D CUDA_ARCH_BIN=7.2 \
@@ -85,7 +85,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
         -D HAVE_opencv_python3=ON \
         -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3 \
         -D OPENCV_GENERATE_PKGCONFIG=ON \
-        -D BUILD_EXAMPLES=OFF \
+        -D BUILD_EXAMPLES=ON \
         -D PYTHON3_EXECUTABLE=$(which python3) \
         -D PYTHON_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
         -D PYTHON_INCLUDE_DIR2=$(python3 -c "from os.path import dirname; from distutils.sysconfig import get_config_h_filename; print(dirname(get_config_h_filename()))") \
