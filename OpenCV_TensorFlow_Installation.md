@@ -33,8 +33,8 @@ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.5.
 # unpack
 unzip opencv.zip
 unzip opencv_contrib.zip
-mv opencv-4.5.0 opencv
-mv opencv_contrib-4.5.0 opencv_contrib
+mv opencv-4.5.1 opencv
+mv opencv_contrib-4.5.1 opencv_contrib
 # clean up the zip files
 rm opencv.zip
 rm opencv_contrib.zip
@@ -85,7 +85,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
         -D HAVE_opencv_python3=ON \
         -D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3 \
         -D OPENCV_GENERATE_PKGCONFIG=ON \
-        -D BUILD_EXAMPLES=OFF \
+        -D BUILD_EXAMPLES=ON \
         -D PYTHON3_EXECUTABLE=$(which python3) \
         -D PYTHON_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
         -D PYTHON_INCLUDE_DIR2=$(python3 -c "from os.path import dirname; from distutils.sysconfig import get_config_h_filename; print(dirname(get_config_h_filename()))") \
