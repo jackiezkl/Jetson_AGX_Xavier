@@ -149,7 +149,11 @@ Run the following command to install the jupyterlab.
 
 pip3 install --user jupyterlab
 
-Then the following to config the settings. The following command will ask user to setup password for the web interface; disable auto open browser;change jupyter lab folder to Documents; change to accept connection from any ip.
+Then run the following to config the settings. The following command will ask user to 
+* setup password for the web interface;
+* disable auto open browser;
+* change jupyter lab folder to Documents;
+* change to accept connection from any ip.
 ```
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
