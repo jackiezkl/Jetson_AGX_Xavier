@@ -142,3 +142,22 @@ sudo pip3 install -U keras_applications gast futures protobuf pybind11
 # TF-2.x
 $ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 tensorflow
 ```
+
+
+# Install Jupyterlab
+Run the following command to install the jupyterlab.
+
+pip3 install --user jupyterlab
+
+Then the following to config the settings. The following command will ask user to setup password for the web interface; disable auto open browser;change jupyter lab folder to Documents; change to accept connection from any ip.
+```
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+password=$(python3 -c "from jupyter_server.auth import passwd;print(passwd());exit()")
+jupyter-lab --generate-config
+sudo sed -i s/"#c.ServerApp.root_dir = ''"/"c.ServerApp.root_dir = '\/home\/jetson\/Documents'"/ ~/.jupyter/jupyter_lab_config.py
+sudo sed -i s/"#c.ServerApp.password = ''"/"c.ServerApp.password = '$password'"/ ~/.jupyter/jupyter_lab_config.py
+sudo sed -i s/"#c.ServerApp.ip = 'localhost'"/"c.ServerApp.ip = '0.0.0.0'"/ ~/.jupyter/jupyter_lab_config.py
+sudo sed -i s/"#c.ExtensionApp.open_browser = True"/"c.ExtensionApp.open_browser = False"/ ~/.jupyter/jupyter_lab_config.py
+
+```
